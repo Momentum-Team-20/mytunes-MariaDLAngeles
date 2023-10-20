@@ -5,55 +5,71 @@
 
 header {
     text-align: center;
-    border: 1px solid blue;
+    background: color #838383;;
+    font-family: sans-serif;
+}
+
+#audio-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 #search-bar {
-    border: 1px solid red;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(83, 83, 83);
+    border-radius: 2px;
     padding-bottom: 2vw;
     padding-top: 2vw;
 }
 
-.search-input {
-    width: 60vw;
+input {
+    width: 70vw;
 }
-
-/* .search-button {
-
-} */
 
 #music-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid pink;
 }
 
 .music-cards {
+    display: flex;
     flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
     padding: 20px;
     max-width: 125px;
+    max-height: 200px;
 }
 
 img {
     height: auto;
     width: auto;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .song-title {
     font-size: small;
     font-weight: bold;
     color: darkblue;
+    margin-top: 5px;
 }
 
 .band-name {
     font-weight: bold;
     color: #181818;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
 }
 
+.playButton {
+    margin-top: 10px;
+    justify-items: flex-end;
+}
 
 /* <section id="music-container">
 <div class="music-cards">

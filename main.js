@@ -64,7 +64,10 @@ function buildMusic(musicArray) {
     musicCard.appendChild(playButton)
     
     playButton.addEventListener('click', () => {
-    audioPlayer.src = song.previewURL
+    audioPlayer.src = song.previewUrl
+    console.log(song.previewUrl)
+    console.log(song)
+
     })
   }
 }
