@@ -35,13 +35,10 @@ input {
 }
 
 .music-cards {
-    display: flex;
-    flex-wrap: wrap;
     text-align: center;
-    justify-content: center;
     padding: 20px;
     max-width: 125px;
-    max-height: 200px;
+    height: auto;
 }
 
 img {
@@ -55,6 +52,7 @@ img {
     font-weight: bold;
     color: darkblue;
     margin-top: 5px;
+    text-align: center;
 }
 
 .band-name {
@@ -63,7 +61,7 @@ img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 5px;
+    text-align: center;
 }
 
 .playButton {

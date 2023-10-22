@@ -12,6 +12,12 @@ let musicSearch = document.querySelector('#music-search')
 let audioSection = document.querySelector('audio-section')
 let audioPlayer = document.getElementById('audioPlayer')
 
+fetch('https://itunes.apple.com/search?term=bobs+burgers&entity=song')
+  .then((response) => {
+    return response.json()
+  }).then((data) => {
+    buildMusic(data.results)
+  })
 
 searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -55,7 +61,7 @@ function buildMusic(musicArray) {
     
     let bandName = document.createElement('div')
     bandName.classList.add("band-name")
-    bandName.innerText = `${song.artistName}`
+    bandName.innerText = `\n${song.artistName}`
     musicCard.appendChild(bandName)
     
     let playButton = document.createElement('button')
@@ -66,7 +72,6 @@ function buildMusic(musicArray) {
     playButton.addEventListener('click', () => {
     audioPlayer.src = song.previewUrl
     console.log(song.previewUrl)
-    console.log(song)
 
     })
   }
